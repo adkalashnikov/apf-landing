@@ -32,6 +32,7 @@
   position: relative;
   background: #13213B;
   color: #ffffff;
+  min-height: 191.59vw;
 
   .inner-page {
     overflow: hidden;
@@ -105,14 +106,11 @@
   position: absolute;
   top: 0;
   right: 0;
+  left: 0;
   width: 100%;
-  height: 154%;
-  color: #1F61BA;
-  opacity: 0;
-
-  .icon {
-    display: block;
-  }
+  height: 153.125vw;
+  background: url("../images/wave1.svg") no-repeat;
+  background-size: cover;
 }
 
 .bg-wave2 {
@@ -120,11 +118,7 @@
   bottom: 0;
   right: 0;
   width: 65.2%;
-  height: 66.8%;
-  color: #1F61BA;
-  opacity: 0;
-
-  .icon {
-    display: block;
-  }
+  height: 66.8vw;
+  background: url("../images/wave2.svg") no-repeat;
+  background-size: cover;
 }

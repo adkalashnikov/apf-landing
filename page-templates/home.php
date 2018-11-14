@@ -29,8 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="bg-wrapper">
     <div class="bg-image1"><img src ="<?php echo IMAGES;?>/bg1.jpg" alt="bg-image"></div>
     <div class="bg-image2"><img src ="<?php echo IMAGES;?>/bg2.jpg" alt="bg-image"></div>
-    <div class="bg-wave1"><svg class="icon wave2"><use xlink:href="#wave1"></use></svg></div>
-    <div class="bg-wave2"><svg class="icon wave2"><use xlink:href="#wave2"></use></svg></div>
+    <div class="bg-wave1"></div>
+    <div class="bg-wave2"></div>
 </div>
 
 <div class="inner-page">
