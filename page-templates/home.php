@@ -34,11 +34,49 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 
 <div class="inner-page">
-    <section class="section1">
+    <header class="header">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row no-gutters align-items-center">
+                <div class="col-md-auto">
+                    <a class="navbar-brand"
+                       rel="home"
+                       href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                       title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+                       itemprop="url"
+                    >
+                        <img class ="center-block img-responsive " src ="<?php echo IMAGES;?>/logo.png" >
+                    </a>
+                </div>
+                <div class="col">
+                    <?php wp_nav_menu(array('menu' => 2)); ?>
+                </div>
+                <div class="col-md-auto">
+                    <div class="phones">
+                        <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
+                        <a href="tel:+380472731315">
+                            0472 <span>73-13-15</span>
+                        </a>
+
+                        <a href="tel:+380504400727" class="phone2">
+                            050 <span>440-07-27</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-text1">
+        <div class="container">
+            <div class="row justify-content-lg-end">
+                <div class="col-md-6">
                     <h1>НЕФТЕ ПРОДУКТЫ</h1>
+                    <p>
+                        ООО «Компания ДЕФИ» создана в 2011 году. Основным направлением предприятия является оптовая
+                        торговля нефтепродуктами и ископаемым углем.
+                    </p>
+                    <p>ООО «Компания ДЕФИ» для вашего удобства, мы предлагаем доставку по территории нашей страны.</p>
+                    <p>ООО «Компания ДЕФИ» — это возможность приобрести качественное топливо по оптимальной цене.</p>
                 </div>
             </div>
         </div>
