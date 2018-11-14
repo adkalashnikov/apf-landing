@@ -170,58 +170,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </section>
 
-
-
-
-
-
-    <section class="section2">
-        <p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque delectus dolorem
-                    dolores, eligendi exercitationem explicabo, harum impedit, magnam mollitia nam nobis porro quam
-                    reprehenderit sint! Alias quis sed voluptas?</span><span>Delectus deserunt doloremque ipsa iure
-                    nostrum omnis praesentium quam recusandae vel velit? Aperiam cum eligendi provident, rerum
-                    similique unde vel voluptate voluptates. Eaque et illo illum nisi non nostrum repellat?
-                </span>
-        </p>
-    </section>
-    <section class="section3">            <p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque delectus dolorem
-                    dolores, eligendi exercitationem explicabo, harum impedit, magnam mollitia nam nobis porro quam
-                    reprehenderit sint! Alias quis sed voluptas?</span><span>Delectus deserunt doloremque ipsa iure
-                    nostrum omnis praesentium quam recusandae vel velit? Aperiam cum eligendi provident, rerum
-                    similique unde vel voluptate voluptates. Eaque et illo illum nisi non nostrum repellat?
-                </span>
-        </p>
-    </section>
-    <section class="section4">            <p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque delectus dolorem
-                    dolores, eligendi exercitationem explicabo, harum impedit, magnam mollitia nam nobis porro quam
-                    reprehenderit sint! Alias quis sed voluptas?</span><span>Delectus deserunt doloremque ipsa iure
-                    nostrum omnis praesentium quam recusandae vel velit? Aperiam cum eligendi provident, rerum
-                    similique unde vel voluptate voluptates. Eaque et illo illum nisi non nostrum repellat?
-                </span>
-        </p>
-    </section>
-    <section class="section5">            <p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque delectus dolorem
-                    dolores, eligendi exercitationem explicabo, harum impedit, magnam mollitia nam nobis porro quam
-                    reprehenderit sint! Alias quis sed voluptas?</span><span>Delectus deserunt doloremque ipsa iure
-                    nostrum omnis praesentium quam recusandae vel velit? Aperiam cum eligendi provident, rerum
-                    similique unde vel voluptate voluptates. Eaque et illo illum nisi non nostrum repellat?
-                </span>
-        </p>
-    </section>
-    <section class="section6">            <p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque delectus dolorem
-                    dolores, eligendi exercitationem explicabo, harum impedit, magnam mollitia nam nobis porro quam
-                    reprehenderit sint! Alias quis sed voluptas?</span><span>Delectus deserunt doloremque ipsa iure
-                    nostrum omnis praesentium quam recusandae vel velit? Aperiam cum eligendi provident, rerum
-                    similique unde vel voluptate voluptates. Eaque et illo illum nisi non nostrum repellat?
-                </span>
-        </p>
-    </section>
-
     <?php get_template_part('inc/svg-sprite' ); ?>
 </div>
 </body>
