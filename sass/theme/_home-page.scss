@@ -130,8 +130,8 @@
       color: #F2C94C;
 
       .icon-phone {
-        width: 18px;
-        height: 18px;
+        width: 23px;
+        height: 23px;
         stroke: #F2C94C;
         margin-right: 6px;
       }
@@ -158,10 +158,10 @@
 
     .menu {
       @include make-row();
-      @extend .justify-content-center;
       padding: 0;
       margin: 0;
       list-style-type: none;
+      @extend .justify-content-center;
 
       a {
         font-style: normal;
@@ -170,7 +170,7 @@
         font-size: 12px;
         color: #FFFFFF;
         display: block;
-        padding: 10px 16px;
+        padding: 4px 18px;
         border: 2px solid transparent;
         transition: border .3s;
         border-radius: 40px;
@@ -179,6 +179,10 @@
           text-decoration: none;
           border: 2px solid #F2C94C;
         }
+
+        @include media-breakpoint-up(lg) {
+          padding: 10px 13px;
+        }
       }
     }
   }
@@ -186,8 +190,11 @@
   .section-text1 {
     padding-top: 50px;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       padding-top: 196px;
+      background: url("../images/car1.png") no-repeat 0 50%;
+      background-size: contain;
+      min-height: 44.44vw;
     }
 
     h1 {
@@ -197,19 +204,125 @@
       margin-bottom: 30px;
 
       @include media-breakpoint-up(xl) {
-        font-weight: 900;
         line-height: 105px;
         font-size: 100px;
         margin-bottom: 83px;
+        padding-left: 32px;
       }
     }
 
     p {
       opacity: .7;
-      
+
       @include media-breakpoint-up(xl) {
-        padding-left: 160px;
+        padding-left: 168px;
       }
+    }
+  }
+
+  .section-about {
+    @include media-breakpoint-up(xl) {
+      padding-top: 120px;
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: 26px;
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(xl) {
+        font-size: 76px;
+        margin-bottom: 54px;
+      }
+    }
+
+    p {
+      opacity: .7;
+    }
+
+    .text-row {
+      @include media-breakpoint-up(xl) {
+        padding-left: 80px;
+      }
+    }
+  }
+
+  .section-cards {
+    padding: 50px 0;
+
+    @include media-breakpoint-up(xl) {
+      padding: 0 0 132px 0;
+    }
+
+
+    .card-item {
+      width: 270px;
+      height: 326px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      margin: 45px auto;
+      transition: margin 0.3s;
+
+      &.item1 {
+        @include media-breakpoint-up(xl) {
+          margin: 295px 0 0 auto;
+        }
+      }
+
+      &.item2 {
+        @include media-breakpoint-up(xl) {
+          margin-top: 0;
+        }
+
+        .title {
+          margin-bottom: 10px;
+        }
+
+        .text {
+          margin-bottom: 25px;
+        }
+      }
+
+      &.item3 {
+        @include media-breakpoint-down(md) {
+          margin-top: 70px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          margin: -295px auto 0 0;
+        }
+      }
+    }
+
+    .image-holder {
+      height: 110px;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+    }
+
+    .title {
+      font-weight: 900;
+      font-size: 22px;
+      color: #2F80ED;
+      margin-bottom: 17px;
+      padding: 0 30px;
+    }
+
+    .text {
+      color: #000000;
+      margin-bottom: 45px;
+      padding: 0 30px;
+    }
+
+    .more-link {
+      color: #2F80ED;
+      padding: 0 30px;
     }
   }
 }

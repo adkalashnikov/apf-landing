@@ -44,14 +44,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                        title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
                        itemprop="url"
                     >
-                        <img class ="center-block img-responsive " src ="<?php echo IMAGES;?>/logo.png" >
+                        <img class ="center-block img-responsive " src ="<?php echo IMAGES;?>/logo.png">
                     </a>
                 </div>
+
                 <div class="col">
                     <?php wp_nav_menu(array('menu' => 2)); ?>
                 </div>
-                <div class="col-md-auto">
-                    <div class="phones">
+
+                <div class="col-xl-auto">
+                    <div class="row no-gutters align-items-center phones">
                         <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
                         <a href="tel:+380472731315">
                             0472 <span>73-13-15</span>
@@ -69,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <section class="section-text1">
         <div class="container">
             <div class="row justify-content-lg-end">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <h1>НЕФТЕ ПРОДУКТЫ</h1>
                     <p>
                         ООО «Компания ДЕФИ» создана в 2011 году. Основным направлением предприятия является оптовая
@@ -81,6 +83,98 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
     </section>
+
+    <section class="section-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h2>О Компании</h2>
+
+                    <div class="row text-row">
+                        <div class="col-md">
+                            <p>
+                                ООО «Компания ДЕФИ» — стремительно развивающаяся фирма, основным назначением
+                                функционирования которой является реализация и поставка печного топлива высокого
+                                качества, а также предоставляющая большой ассортимент другой продукции на рынке топлива.
+                            </p>
+                            <p>
+                                Мы принимаем все меры, чтобы клиент- использовал исключительно качественные
+                                нефтепродукты по очень выгодной стоимости.
+                            </p>
+                        </div>
+
+                        <div class="col-md">
+                            <p>
+                                Компания тщательно наблюдает за качеством закупаемых нефтепродуктов.
+                            </p>
+
+                            <p>
+                                Приобретая наше топливо — можно быть уверенным в его качестве. Наша компания
+                                гарантирует, что работа производится только с тем топливом, которое соответствует ТУ У.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card-item item1">
+                        <div class="image-holder">
+                            <img src="<?php echo IMAGES;?>/oil.png" alt="card image">
+                        </div>
+                        <div class="title">НЕФТЕПРОДУКТЫ</div>
+                        <div class="text">
+                            Только качественные
+                            и сертифицированные
+                            нефтепродукты.
+                        </div>
+                        <a class="more-link" href="#">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card-item item2">
+                        <div class="image-holder">
+                            <img src="<?php echo IMAGES;?>/coal.png" alt="card image">
+                        </div>
+                        <div class="title">ИСКОПАЕМЫЙ УГОЛЬ</div>
+                        <div class="text">
+                            Предлагаем самый
+                            широкий выбор
+                            ископаемого угля.
+                        </div>
+                        <a class="more-link" href="#">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card-item item3">
+                        <div class="image-holder">
+                            <img src="<?php echo IMAGES;?>/car2.png" alt="card image">
+                        </div>
+                        <div class="title">ТРАНСПОРТ</div>
+                        <div class="text">
+                            Мы осуществляем
+                            доставку по всей
+                            территории Украине.
+                        </div>
+                        <a class="more-link" href="#">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
     <section class="section2">
         <p>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque delectus dolorem
