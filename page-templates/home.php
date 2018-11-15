@@ -10,6 +10,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -36,7 +38,66 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="inner-page">
     <header class="header">
         <div class="container">
-            <div class="row no-gutters align-items-center">
+            <div class="d-xl-none">
+                <!-- ******************* The Navbar Area ******************* -->
+                <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+
+                    <a class="skip-link sr-only sr-only-focusable" href="#content">
+                        <?php esc_html_e( 'Skip to content', 'understrap' ); ?>
+                    </a>
+
+                    <nav class="navbar navbar-expand-xl navbar-dark">
+
+                        <?php if ( 'container' == $container ) : ?>
+                        <div class="container" >
+                            <?php endif; ?>
+                            <a class="navbar-brand"
+                               rel="home"
+                               href="<?php echo esc_url( home_url( '/' ) ); ?>"
+                               title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+                               itemprop="url"
+                            >
+                                <img class ="center-block img-responsive " src ="<?php echo IMAGES;?>/logo.png">
+                            </a>
+
+                            <div class="row no-gutters align-items-center phones">
+                                <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
+                                <a href="tel:+380472731315">
+                                    0472 <span>73-13-15</span>
+                                </a>
+
+                                <a href="tel:+380504400727" class="phone2 d-none d-md-block">
+                                    050 <span>440-07-27</span>
+                                </a>
+                            </div>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- The WordPress Menu goes here -->
+                            <?php wp_nav_menu(
+                                array(
+                                    'theme_location'  => 'primary',
+                                    'container_class' => 'collapse navbar-collapse',
+                                    'container_id'    => 'navbarNavDropdown',
+                                    'menu_class'      => 'navbar-nav ml-auto',
+                                    'fallback_cb'     => '',
+                                    'menu_id'         => 'main-menu',
+                                    'depth'           => 2,
+                                    'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+                                )
+                            ); ?>
+                            <?php if ( 'container' == $container ) : ?>
+                        </div><!-- .container -->
+                    <?php endif; ?>
+
+                    </nav><!-- .site-navigation -->
+
+                </div><!-- #wrapper-navbar end -->
+            </div>
+
+            <div class="d-none d-xl-flex no-gutters align-items-center">
                 <div class="col-md-auto">
                     <a class="navbar-brand"
                        rel="home"
@@ -170,7 +231,104 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </section>
 
+    <section class="section-advantages">
+        <div class="container">
+            <div class="row justify-content-lg-end">
+                <div class="col-lg-6">
+                    <h2>преимущества</h2>
+                    <div class="subtitle">У нас за плечами огромный опыт и успешная практика.</div>
+                </div>
+            </div>
+
+            <div class="advantages-wrapper">
+                <div class="advantages-item">
+                    <div class="icon"><svg class="icon icon-delivery"><use xlink:href="#icon-delivery"></use></svg></div>
+                    <div class="text">
+                        Оперативная доставка
+                        собственном
+                        автотранспортом
+                    </div>
+                </div>
+
+                <div class="advantages-item">
+                    <div class="icon"><svg class="icon icon-wallet"><use xlink:href="#icon-wallet"></use></svg></div>
+                    <div class="text">
+                        Оптимальные цены
+                        на поставки топлива
+                    </div>
+                </div>
+
+                <div class="advantages-item">
+                    <div class="icon"><svg class="icon icon-doc"><use xlink:href="#icon-doc"></use></svg></div>
+                    <div class="text">
+                        Исключительно
+                        качественные
+                        горючие материалы
+                    </div>
+                </div>
+
+                <div class="advantages-item">
+                    <div class="icon"><svg class="icon icon-badge"><use xlink:href="#icon-badge"></use></svg></div>
+                    <div class="text">
+                        Возможность заключения
+                        договора на регулярные
+                        поставки
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-8">
+                    <div class="row no-gutters">
+                        <div class="col-lg-5">
+                            <h2>Свяжитесь с нами</h2>
+                        </div>
+                        <div class="col-md">
+                            <div class="contact-info">
+                                <div class="d-flex align-items-center pb-3">
+                                    <svg class="icon icon-marker"><use xlink:href="#icon-marker"></use></svg>
+                                    18000,  г. Черкассы,  ул. Чехова 115.
+                                </div>
+                                <div class="d-flex align-items-center pb-3">
+                                    <svg class="icon icon-phone-light"><use xlink:href="#icon-phone-light"></use></svg>
+                                    (0472) 73-13-15, (050) 440-07-27
+                                </div>
+                                <div class="d-flex align-items-center pb-3">
+                                    <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+                                    deficompany@gmail.com
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <svg class="icon icon-fax"><use xlink:href="#icon-fax"></use></svg>
+                                    (0472) 73-13-15
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-copy d-none d-lg-flex justify-content-lg-between pt-lg-5">
+                        <div>&copy;<?php echo date(Y);?> - ООО «Компания ДЕФИ” . Все права защищены.</div>
+                        <div>Разработка: <a href="https://freelancehunt.com/freelancer/Murzak.html" target="_blank">murzak</a></div>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <?php echo do_shortcode('[contact-form-7 id="13" title="Контактная форма"]'); ?>
+                </div>
+
+                <div class="col-md-12 row-copy d-lg-none pt-2">
+                    <div>&copy;<?php echo date(Y);?> - ООО «Компания ДЕФИ” . Все права защищены.</div>
+                    <div>Разработка: <a href="https://freelancehunt.com/freelancer/Murzak.html" target="_blank">murzak</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <?php get_template_part('inc/svg-sprite' ); ?>
 </div>
+
+<?php wp_footer(); ?>
 </body>
 </html>
