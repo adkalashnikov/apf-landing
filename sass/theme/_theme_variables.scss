@@ -12,3 +12,27 @@ $container-max-widths: (
 $font-family-sans-serif: Roboto, sans-serif;
 $font-weight-base: 300;
 $input-placeholder-color: #ffffff;
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  12% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  15% {
+    transform: scale(0.90);
+    animation-timing-function: ease-in;
+  }
+  20% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}

@@ -262,14 +262,17 @@
       border-radius: 16px;
       margin: 45px auto;
       transition: margin 0.3s;
+      animation: heartbeat 5s cubic-bezier(0.190, 1.000, 0.220, 1.000) infinite reverse both;
 
       &.item1 {
+        animation-delay: 4s;
         @include media-breakpoint-up(xl) {
           margin: 295px 0 0 auto;
         }
       }
 
       &.item2 {
+        animation-delay: 2s;
         @include media-breakpoint-up(xl) {
           margin-top: 0;
         }
