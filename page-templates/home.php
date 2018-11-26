@@ -35,7 +35,11 @@ $container = get_theme_mod( 'understrap_container_type' );
             <source src="<?php echo get_template_directory_uri();?>/video/bg1.mp4" type="video/mp4">
         </video>
     </div>
-    <div class="bg-wave1"></div>
+    <div class="bg-wave1">
+        <svg width="101%" height="101%" viewBox="0 0 1441 2206" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M711 260C820 224.094 807 185 851 111C886.047 52.0575 948.452 18.4276 997.566 0.17807H1440.5L1440.95 889.291C1394.59 925.431 1338.7 992.75 1302 1106C1232 1322 1213.27 1342.98 1104 1318C1034 1302 984.682 1347.96 956 1414C837 1688 658 1776 434 1840C210 1904 226 1926 172 2060C138.803 2142.38 59.7807 2185.94 0.0078125 2205.02L0.281555 755.965C65.3855 729.366 151.444 731.182 255 713C386 690 404 528 462 423C520 318 626 288 711 260Z" fill="#1F61BA"/>
+        </svg>
+    </div>
     <div class="bg-wave2"></div>
 </div>
 

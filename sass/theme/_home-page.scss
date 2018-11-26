@@ -70,8 +70,12 @@
   left: 0;
   width: 100%;
   height: 153.125vw;
-  background: url("../images/wave1.svg") no-repeat;
-  background-size: cover;
+
+  svg {
+    position: absolute;
+    top: -22px;
+    right: 0;
+  }
 }
 
 .bg-wave2 {
