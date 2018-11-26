@@ -30,7 +30,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body class="home-page">
 <div class="bg-wrapper">
     <div class="bg-image1"><img src ="<?php echo IMAGES;?>/bg1.jpg" alt="bg-image"></div>
-    <div class="bg-image2"><img src ="<?php echo IMAGES;?>/bg2.jpg" alt="bg-image"></div>
+    <div class="bg-image2">
+        <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/vbg1.jpg" autoplay="" loop="" muted="">
+            <source src="<?php echo get_template_directory_uri();?>/video/bg1.mp4" type="video/mp4">
+        </video>
+        <!--        <img src ="--><?php //echo IMAGES;?><!--/bg2.jpg" alt="bg-image">-->
+    </div>
     <div class="bg-wave1"></div>
     <div class="bg-wave2"></div>
 </div>
