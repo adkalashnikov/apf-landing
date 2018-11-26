@@ -182,9 +182,10 @@
 
     @include media-breakpoint-up(lg) {
       padding-top: 196px;
-      background: url("../images/car1.png") no-repeat 0 50%;
+      background: url("../images/car1.png") no-repeat -100% 50%;
       background-size: contain;
       min-height: 44.44vw;
+      transition: background-position 2s;
     }
 
     h1 {
@@ -206,6 +207,14 @@
 
       @include media-breakpoint-up(xl) {
         padding-left: 168px;
+      }
+    }
+  }
+
+  &.page-loaded {
+    .section-text1 {
+      @include media-breakpoint-up(lg) {
+        background-position: 0 50%;
       }
     }
   }
