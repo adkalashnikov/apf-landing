@@ -183,10 +183,10 @@
     padding-top: 50px;
 
     @include media-breakpoint-up(lg) {
-      padding-top: 196px;
+      padding-top: 202px;
       background: url("../images/car1.png") no-repeat -100% 50%;
       background-size: contain;
-      min-height: 44.44vw;
+      min-height: 64.44vw;
       transition: background-position 2s;
     }
 
@@ -216,7 +216,8 @@
   &.page-loaded {
     .section-text1 {
       @include media-breakpoint-up(lg) {
-        background-position: 0 50%;
+        background-position: 0 6%;
+        background-size: 63%;
       }
     }
   }
@@ -225,7 +226,8 @@
     padding: 30px 0;
 
     @include media-breakpoint-up(xl) {
-      padding: 120px 0 0 0;
+      padding: 0;
+      margin-top: -160px;
     }
 
     h2 {
@@ -255,28 +257,61 @@
 
     @include media-breakpoint-up(xl) {
       padding: 0;
+      position: relative;
+      height: 478px;
+    }
+
+    .container {
+      @include media-breakpoint-up(xl) {
+        width: 1075px;
+      }
     }
 
     .card-item {
-      width: 270px;
-      height: 326px;
+      width: 300px;
+      min-height: 360px;
       background: #FFFFFF;
-      border-radius: 16px;
       margin: 45px auto;
       transition: margin 0.3s;
-      animation: heartbeat 5s cubic-bezier(0.190, 1.000, 0.220, 1.000) infinite reverse both;
+      padding: 20px;
+
+      @include media-breakpoint-up(xl) {
+        width: 320px;
+        padding: 40px;
+        margin: 0 auto;
+        position: absolute;
+
+        &:hover {
+          box-shadow: 0 0 5px #000;
+
+          .button-holder {
+            @include media-breakpoint-up(xl) {
+              max-height: 43px;
+              overflow: visible;
+            }
+          }
+
+          .more-link {
+            visibility: visible;
+          }
+        }
+      }
 
       &.item1 {
-        animation-delay: 4s;
         @include media-breakpoint-up(xl) {
-          margin: 295px 0 0 auto;
+          top: 136px;
+        }
+
+        .icon {
+          width: 36px;
+          height: 48px;
         }
       }
 
       &.item2 {
-        animation-delay: 2s;
         @include media-breakpoint-up(xl) {
           margin-top: 0;
+          top: -22px;
         }
 
         .title {
@@ -286,57 +321,83 @@
         .text {
           margin-bottom: 25px;
         }
+
+        .icon {
+          width: 38px;
+          height: 44px;
+        }
       }
 
       &.item3 {
-        @include media-breakpoint-down(md) {
-          margin-top: 70px;
+        @include media-breakpoint-up(xl) {
+          top: -288px;
         }
 
-        @include media-breakpoint-up(xl) {
-          margin: -295px auto 0 0;
+        .icon {
+          width: 60px;
+          height: 38px;
         }
       }
     }
 
     .image-holder {
-      height: 110px;
-      position: relative;
-
-      img {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-      }
+      height: 100px;
+      color: #000000;
     }
 
     .title {
       font-weight: 900;
       font-size: 22px;
-      color: #2F80ED;
-      margin-bottom: 17px;
-      padding: 0 30px;
+      margin-bottom: 20px;
+      color: #000000;
+
+      @include media-breakpoint-up(md) {
+        font-size: 27px;
+      }
     }
 
     .text {
       color: #000000;
       margin-bottom: 45px;
-      padding: 0 30px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 18px;
+      }
+    }
+
+    .button-holder {
+      @include media-breakpoint-up(xl) {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s ease-in-out;
+      }
     }
 
     .more-link {
-      color: #2F80ED;
-      padding: 0 30px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1;
+      font-size: 16px;
+      color: #000000;
+      border: 2px solid #FFE600;
+      border-radius: 40px;
+      padding: 10px 22px;
+      display: inline-block;
+
+      @include media-breakpoint-up(xl) {
+        visibility: hidden;
+        transition: visibility 1600ms cubic-bezier(.455,.03,.515,.955);
+      }
+
+      &:hover {
+        text-decoration: none;
+        animation: btnBorder .5s ease-out;
+      }
     }
   }
 
   .section-advantages {
     padding: 30px 0;
-
-    @include media-breakpoint-up(xl) {
-      margin-top: -160px;
-    }
 
     h2 {
       font-weight: 900;
@@ -396,7 +457,7 @@
     padding: 0 0 30px 0;
 
     @include media-breakpoint-up(xl) {
-      padding: 140px 0 60px 0;
+      padding: 87px 0 0 0;
     }
 
     h2 {
@@ -406,6 +467,7 @@
 
       @include media-breakpoint-up(xl) {
         font-size: 48px;
+        line-height: 1.3;
       }
     }
 
@@ -431,6 +493,10 @@
         margin: 18px 0;
       }
 
+      @include media-breakpoint-up(lg) {
+        padding-top: 12px;
+      }
+
       .icon {
         width: 22px;
         height: 24px;
@@ -440,6 +506,10 @@
 
     .contact_form {
       max-width: 408px;
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 20px;
+      }
     }
 
     input {

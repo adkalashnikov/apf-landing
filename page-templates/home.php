@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </svg>
     </div>
     <div class="bg-wave2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 944 965" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="102%" height="102%" viewBox="0 0 944 965" fill="none">
             <path d="M303 724.5C188.5 848 229 886.5 0 963.5L944 964.5V0C902.227 38.8076 856.307 101.832 824.656 199.5C754.656 415.5 558 436.5 553.49 539.5C546.827 691.705 379.983 641.466 303 724.5Z" fill="#1F61BA"/>
         </svg>
     </div>
@@ -198,7 +198,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="col-md">
                     <div class="card-item item1">
                         <div class="image-holder">
-                            <img src="<?php echo IMAGES;?>/oil.png" alt="card image">
+                            <svg class="icon icon-oil"><use xlink:href="#icon-oil"></use></svg>
                         </div>
                         <div class="title">НЕФТЕПРОДУКТЫ</div>
                         <div class="text">
@@ -206,14 +206,16 @@ $container = get_theme_mod( 'understrap_container_type' );
                             и сертифицированные
                             нефтепродукты.
                         </div>
-                        <a class="more-link" href="#">Подробнее</a>
+                        <div class="button-holder">
+                            <a class="more-link" href="#">Подробнее</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-md">
                     <div class="card-item item2">
                         <div class="image-holder">
-                            <img src="<?php echo IMAGES;?>/coal.png" alt="card image">
+                            <svg class="icon icon-coal"><use xlink:href="#icon-coal"></use></svg>
                         </div>
                         <div class="title">ИСКОПАЕМЫЙ УГОЛЬ</div>
                         <div class="text">
@@ -221,14 +223,16 @@ $container = get_theme_mod( 'understrap_container_type' );
                             широкий выбор
                             ископаемого угля.
                         </div>
-                        <a class="more-link" href="#">Подробнее</a>
+                        <div class="button-holder">
+                            <a class="more-link" href="#">Подробнее</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-md">
                     <div class="card-item item3">
                         <div class="image-holder">
-                            <img src="<?php echo IMAGES;?>/car2.png" alt="card image">
+                            <svg class="icon icon-truck"><use xlink:href="#icon-truck"></use></svg>
                         </div>
                         <div class="title">ТРАНСПОРТ</div>
                         <div class="text">
@@ -236,7 +240,9 @@ $container = get_theme_mod( 'understrap_container_type' );
                             доставку по всей
                             территории Украине.
                         </div>
-                        <a class="more-link" href="#">Подробнее</a>
+                        <div class="button-holder">
+                            <a class="more-link" href="#">Подробнее</a>
+                        </div>
                     </div>
                 </div>
             </div>

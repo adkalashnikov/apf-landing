@@ -13,26 +13,17 @@ $font-family-sans-serif: Roboto, sans-serif;
 $font-weight-base: 300;
 $input-placeholder-color: #ffffff;
 
-@keyframes heartbeat {
+@keyframes btnBorder {
   from {
-    transform: scale(1);
-    transform-origin: center center;
-    animation-timing-function: ease-out;
+    border-color: #FFE600;
+    box-shadow: none;
   }
-  10% {
-    transform: scale(0.95);
-    animation-timing-function: ease-in;
+  50% {
+    border-color: #ebd200;
+    box-shadow: 0 0 3px #ebd200 inset;
   }
-  12% {
-    transform: scale(0.98);
-    animation-timing-function: ease-out;
-  }
-  15% {
-    transform: scale(0.90);
-    animation-timing-function: ease-in;
-  }
-  20% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
+  100% {
+    border-color: #FFE600;
+    box-shadow: none;
   }
 }
