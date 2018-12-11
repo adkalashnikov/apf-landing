@@ -145,13 +145,13 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container">
             <div class="row justify-content-lg-end">
                 <div class="col-lg-6">
-                    <h1>НЕФТЕ ПРОДУКТЫ</h1>
-                    <p>
-                        ООО «Компания ДЕФИ» создана в 2011 году. Основным направлением предприятия является оптовая
-                        торговля нефтепродуктами и ископаемым углем.
-                    </p>
-                    <p>ООО «Компания ДЕФИ» для вашего удобства, мы предлагаем доставку по территории нашей страны.</p>
-                    <p>ООО «Компания ДЕФИ» — это возможность приобрести качественное топливо по оптимальной цене.</p>
+                    <?php if (get_field('s1-title')){ ?>
+                        <h1><?php the_field('s1-title'); ?></h1>
+                    <?php } ?>
+
+                    <?php if (get_field('s1-text')){ ?>
+                        <?php the_field('s1-text'); ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -161,30 +161,21 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
-                    <h2>О Компании</h2>
+                    <?php if (get_field('s2-title')){ ?>
+                        <h2><?php the_field('s2-title'); ?></h2>
+                    <?php } ?>
 
                     <div class="row text-row">
                         <div class="col-md">
-                            <p>
-                                ООО «Компания ДЕФИ» — стремительно развивающаяся фирма, основным назначением
-                                функционирования которой является реализация и поставка печного топлива высокого
-                                качества, а также предоставляющая большой ассортимент другой продукции на рынке топлива.
-                            </p>
-                            <p>
-                                Мы принимаем все меры, чтобы клиент- использовал исключительно качественные
-                                нефтепродукты по очень выгодной стоимости.
-                            </p>
+                            <?php if (get_field('s2-text1')){ ?>
+                                <?php the_field('s2-text1'); ?>
+                            <?php } ?>
                         </div>
 
                         <div class="col-md">
-                            <p>
-                                Компания тщательно наблюдает за качеством закупаемых нефтепродуктов.
-                            </p>
-
-                            <p>
-                                Приобретая наше топливо — можно быть уверенным в его качестве. Наша компания
-                                гарантирует, что работа производится только с тем топливом, которое соответствует ТУ У.
-                            </p>
+                            <?php if (get_field('s2-text2')){ ?>
+                                <?php the_field('s2-text2'); ?>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -200,11 +191,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <div class="image-holder">
                             <svg class="icon icon-oil"><use xlink:href="#icon-oil"></use></svg>
                         </div>
-                        <div class="title">НЕФТЕПРОДУКТЫ</div>
+                        <div class="title">
+                            <?php if (get_field('s3-title1')){ ?>
+                                <?php the_field('s3-title1'); ?>
+                            <?php } ?>
+                        </div>
                         <div class="text">
-                            Только качественные
-                            и сертифицированные
-                            нефтепродукты.
+                            <?php if (get_field('s3-text1')){ ?>
+                                <?php the_field('s3-text1'); ?>
+                            <?php } ?>
                         </div>
                         <div class="button-holder">
                             <a class="more-link" href="#">Подробнее</a>
@@ -217,11 +212,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <div class="image-holder">
                             <svg class="icon icon-coal"><use xlink:href="#icon-coal"></use></svg>
                         </div>
-                        <div class="title">ИСКОПАЕМЫЙ УГОЛЬ</div>
+                        <div class="title">
+                            <?php if (get_field('s3-title2')){ ?>
+                                <?php the_field('s3-title2'); ?>
+                            <?php } ?>
+                        </div>
                         <div class="text">
-                            Предлагаем самый
-                            широкий выбор
-                            ископаемого угля.
+                            <?php if (get_field('s3-text2')){ ?>
+                                <?php the_field('s3-text2'); ?>
+                            <?php } ?>
                         </div>
                         <div class="button-holder">
                             <a class="more-link" href="#">Подробнее</a>
@@ -234,11 +233,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <div class="image-holder">
                             <svg class="icon icon-truck"><use xlink:href="#icon-truck"></use></svg>
                         </div>
-                        <div class="title">ТРАНСПОРТ</div>
+                        <div class="title">
+                            <?php if (get_field('s3-title3')){ ?>
+                                <?php the_field('s3-title3'); ?>
+                            <?php } ?>
+                        </div>
                         <div class="text">
-                            Мы осуществляем
-                            доставку по всей
-                            территории Украине.
+                            <?php if (get_field('s3-text3')){ ?>
+                                <?php the_field('s3-text3'); ?>
+                            <?php } ?>
                         </div>
                         <div class="button-holder">
                             <a class="more-link" href="#">Подробнее</a>
@@ -253,8 +256,14 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container">
             <div class="row justify-content-lg-end">
                 <div class="col-lg-6">
-                    <h2>преимущества</h2>
-                    <div class="subtitle">У нас за плечами огромный опыт и успешная практика.</div>
+                    <?php if (get_field('s4-title')){ ?>
+                        <h2><?php the_field('s4-title'); ?></h2>
+                    <?php } ?>
+                    <div class="subtitle">
+                        <?php if (get_field('s4-subtitle')){ ?>
+                            <?php the_field('s4-subtitle'); ?>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
 
@@ -262,35 +271,36 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="advantages-item">
                     <div class="icon"><svg class="icon icon-delivery"><use xlink:href="#icon-delivery"></use></svg></div>
                     <div class="text">
-                        Оперативная доставка
-                        собственном
-                        автотранспортом
+                        <?php if (get_field('s4-text1')){ ?>
+                            <?php the_field('s4-text1'); ?>
+                        <?php } ?>
                     </div>
                 </div>
 
                 <div class="advantages-item">
                     <div class="icon"><svg class="icon icon-wallet"><use xlink:href="#icon-wallet"></use></svg></div>
                     <div class="text">
-                        Оптимальные цены
-                        на поставки топлива
+                        <?php if (get_field('s4-text2')){ ?>
+                            <?php the_field('s4-text2'); ?>
+                        <?php } ?>
                     </div>
                 </div>
 
                 <div class="advantages-item">
                     <div class="icon"><svg class="icon icon-doc"><use xlink:href="#icon-doc"></use></svg></div>
                     <div class="text">
-                        Исключительно
-                        качественные
-                        горючие материалы
+                        <?php if (get_field('s4-text3')){ ?>
+                            <?php the_field('s4-text3'); ?>
+                        <?php } ?>
                     </div>
                 </div>
 
                 <div class="advantages-item">
                     <div class="icon"><svg class="icon icon-badge"><use xlink:href="#icon-badge"></use></svg></div>
                     <div class="text">
-                        Возможность заключения
-                        договора на регулярные
-                        поставки
+                        <?php if (get_field('s4-text4')){ ?>
+                            <?php the_field('s4-text4'); ?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -309,19 +319,27 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <div class="contact-info">
                                 <div class="d-flex align-items-center pb-3">
                                     <svg class="icon icon-marker"><use xlink:href="#icon-marker"></use></svg>
-                                    18000,  г. Черкассы,  ул. Чехова 115.
+                                    <?php if (get_field('s5-text1')){ ?>
+                                        <?php the_field('s5-text1'); ?>
+                                    <?php } ?>
                                 </div>
                                 <div class="d-flex align-items-center pb-3">
                                     <svg class="icon icon-phone-light"><use xlink:href="#icon-phone-light"></use></svg>
-                                    (0472) 73-13-15, (050) 440-07-27
+                                    <?php if (get_field('s5-text2')){ ?>
+                                        <?php the_field('s5-text2'); ?>
+                                    <?php } ?>
                                 </div>
                                 <div class="d-flex align-items-center pb-3">
                                     <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
-                                    deficompany@gmail.com
+                                    <?php if (get_field('s5-text3')){ ?>
+                                        <?php the_field('s5-text3'); ?>
+                                    <?php } ?>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <svg class="icon icon-fax"><use xlink:href="#icon-fax"></use></svg>
-                                    (0472) 73-13-15
+                                    <?php if (get_field('s5-text4')){ ?>
+                                        <?php the_field('s5-text4'); ?>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
