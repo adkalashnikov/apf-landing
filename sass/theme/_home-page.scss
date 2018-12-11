@@ -183,10 +183,10 @@
 
     @include media-breakpoint-up(lg) {
       padding-top: 202px;
-      background: url("../images/car1.png") no-repeat -100% 50%;
+      background: url("../images/car1.png") no-repeat -150% -150%;
       background-size: contain;
       min-height: 64.44vw;
-      transition: background-position 2s;
+      transition: background-position 2s cubic-bezier(0,.76,.77,1.19);
     }
 
     h1 {
