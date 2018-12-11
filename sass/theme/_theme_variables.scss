@@ -27,3 +27,14 @@ $input-placeholder-color: #ffffff;
     box-shadow: none;
   }
 }
+
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(0,100%,0);
+  }
+
+  to {
+    transform: translateZ(0);
+    visibility: visible;
+  }
+}

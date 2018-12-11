@@ -24,4 +24,24 @@ jQuery(document).ready(function($) {
         duration: 5000,
         loop: true
     });
+
+
+
+    $.fn.isInViewport = function() {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $(window).on('resize scroll', function() {
+        var cards = $('.section-cards');
+
+        if ($(cards).isInViewport()) {
+            $('.card-item').addClass('is-visible');
+        }
+    });
 });

@@ -273,6 +273,20 @@
       margin: 45px auto;
       transition: margin 0.3s;
       padding: 20px;
+      visibility: hidden;
+
+      &.is-visible {
+        animation: slideInUp 1s cubic-bezier(0,.76,.77,1.19);
+        animation-fill-mode: both;
+
+        &.item2 {
+          animation-delay: 300ms;
+        }
+
+        &.item1 {
+          animation-delay: 600ms;
+        }
+      }
 
       @include media-breakpoint-up(xl) {
         width: 320px;
