@@ -1,0 +1,14 @@
+@import "theme";
+@import "components/header";
+@import "components/contacts-section";
+
+body {
+  background: #13213B;
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}

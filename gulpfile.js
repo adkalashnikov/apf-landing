@@ -95,7 +95,12 @@ gulp.task( 'cssnano', function() {
 });
 
 gulp.task( 'minifycss', function() {
-    return gulp.src( [`${paths.css}/theme.css`, `${paths.css}/home-page.css`], {base: paths.css})
+    return gulp.src( [
+            `${paths.css}/theme.css`,
+            `${paths.css}/petroleum-page.css`,
+            `${paths.css}/home-page.css`
+            ], {base: paths.css}
+        )
         .pipe( sourcemaps.init( { loadMaps: true } ) )
         .pipe( cleanCSS( { compatibility: '*' } ) )
         .pipe( plumber( {
@@ -110,7 +115,12 @@ gulp.task( 'minifycss', function() {
 });
 
 gulp.task( 'minifycss-no-maps', function() {
-    return gulp.src( [`${paths.css}/theme.css`, `${paths.css}/home-page.css`], {base: paths.css})
+    return gulp.src( [
+            `${paths.css}/theme.css`,
+            `${paths.css}/petroleum-page.css`,
+            `${paths.css}/home-page.css`
+            ], {base: paths.css}
+        )
         .pipe( cleanCSS( { compatibility: '*' } ) )
         .pipe( plumber( {
             errorHandler: function( err ) {
