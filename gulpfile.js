@@ -95,19 +95,42 @@ gulp.task( 'cssnano', function() {
 });
 
 gulp.task( 'minifycss', function() {
-  return gulp.src( paths.css + '/*.css' )
-  .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( cleanCSS( { compatibility: '*' } ) )
-    .pipe( plumber( {
+    return gulp.src( [`${paths.css}/theme.css`, `${paths.css}/home-page.css`], {base: paths.css})
+        .pipe( sourcemaps.init( { loadMaps: true } ) )
+        .pipe( cleanCSS( { compatibility: '*' } ) )
+        .pipe( plumber( {
             errorHandler: function( err ) {
                 console.log( err ) ;
                 this.emit( 'end' );
             }
         } ) )
-    .pipe( rename( { suffix: '.min' } ) )
-     .pipe( sourcemaps.write( './' ) )
-    .pipe( gulp.dest( paths.css ) );
+        .pipe( rename( { suffix: '.min' } ) )
+        .pipe( sourcemaps.write( './' ) )
+        .pipe( gulp.dest( paths.css ) );
 });
+
+gulp.task( 'minifycss-no-maps', function() {
+    return gulp.src( [`${paths.css}/theme.css`, `${paths.css}/home-page.css`], {base: paths.css})
+        .pipe( cleanCSS( { compatibility: '*' } ) )
+        .pipe( plumber( {
+            errorHandler: function( err ) {
+                console.log( err ) ;
+                this.emit( 'end' );
+            }
+        } ) )
+        .pipe( rename( { suffix: '.min' } ) )
+        .pipe( gulp.dest( paths.css ) );
+});
+
+gulp.task( 'del-css-maps', function() {
+    return gulp.src( paths.css + '/*.map', { read: false } ) // Much faster
+        .pipe( rimraf() );
+});
+
+gulp.task( 'css-to-prod', function( callback ) {
+    gulpSequence( 'minifycss-no-maps', 'del-css-maps' )( callback );
+} );
+
 
 gulp.task( 'cleancss', function() {
   return gulp.src( paths.css + '/*.min.css', { read: false } ) // Much faster
