@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6">
+                <div class="col">
                     <h1><?php the_title(); ?></php></h1>
 
 
@@ -56,36 +56,44 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
 
             <div class="row text-items">
-                <div class="col-md-6 col-lg-4 text-item">
-                    <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
-                    <div class="text">
-                        <?php if (get_field('s-top-text1')){ ?>
-                            <?php the_field('s-top-text1'); ?>
-                        <?php } ?>
+                <div class="col-6 col-lg-3">
+                    <div class="text-item">
+                        <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
+                        <div class="text">
+                            <?php if (get_field('s-top-text1')){ ?>
+                                <?php the_field('s-top-text1'); ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 text-item">
-                    <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
-                    <div class="text">
-                        <?php if (get_field('s-top-text2')){ ?>
-                            <?php the_field('s-top-text2'); ?>
-                        <?php } ?>
+                <div class="col-6 col-lg-3">
+                    <div class="text-item">
+                        <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
+                        <div class="text">
+                            <?php if (get_field('s-top-text2')){ ?>
+                                <?php the_field('s-top-text2'); ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 text-item">
-                    <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
-                    <div class="text">
-                        <?php if (get_field('s-top-text3')){ ?>
-                            <?php the_field('s-top-text3'); ?>
-                        <?php } ?>
+                <div class="col-6 col-lg-3">
+                    <div class="text-item">
+                        <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
+                        <div class="text">
+                            <?php if (get_field('s-top-text3')){ ?>
+                                <?php the_field('s-top-text3'); ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 text-item">
-                    <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
-                    <div class="text">
-                        <?php if (get_field('s-top-text4')){ ?>
-                            <?php the_field('s-top-text4'); ?>
-                        <?php } ?>
+                <div class="col-6 col-lg-3">
+                    <div class="text-item">
+                        <div class="icon-wrapper"><svg class="icon drop"><use xlink:href="#drop"></use></svg></div>
+                        <div class="text">
+                            <?php if (get_field('s-top-text4')){ ?>
+                                <?php the_field('s-top-text4'); ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,6 +104,8 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <path d="M0 31.9996C0 31.9996 85.9153 78.9994 135 31.9996C184.085 -15.0001 246 -6.00071 355 31.9996C464 70 438 92.9995 622 31.9996C806 -29.0002 985 101 1114 38C1243 -24.9996 1440 52 1440 52V231H0V31.9996Z" fill="#1F61BA"/>
             </svg>
         </div>
+
+        <svg class="icon arr-down"><use xlink:href="#arr-down"></use></svg>
     </section>
 
     <section class="section-2">
@@ -109,21 +119,21 @@ $container = get_theme_mod( 'understrap_container_type' );
     <section class="section-fuel-types">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12 col-lg-4">
                     <div class="title">
                         <?php if (get_field('s3-title')){ ?>
                             <?php the_field('s3-title'); ?>
                         <?php } ?>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="text">
                         <?php if (get_field('s3-text1')){ ?>
                             <?php the_field('s3-text1'); ?>
                         <?php } ?>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="text">
                         <?php if (get_field('s3-text2')){ ?>
                             <?php the_field('s3-text2'); ?>
@@ -146,7 +156,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="title">
+                    <div class="text">
                         <?php if (get_field('s6-text1')){ ?>
                             <?php the_field('s6-text1'); ?>
                         <?php } ?>
@@ -167,10 +177,9 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
                 </div>
             </div>
+            <div class="line"></div>
         </div>
     </section>
-
-
 
     <?php get_template_part('inc/contacts-section' ); ?>
     <?php get_template_part('inc/svg-sprite' ); ?>

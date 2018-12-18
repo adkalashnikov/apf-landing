@@ -38,3 +38,30 @@ $input-placeholder-color: #ffffff;
     visibility: visible;
   }
 }
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%)
+  }
+
+  25% {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%)
+  }
+
+  65% {
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%)
+  }
+
+  95% {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%)
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%)
+  }
+}
