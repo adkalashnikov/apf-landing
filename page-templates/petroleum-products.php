@@ -144,6 +144,52 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
     </section>
 
+    <section class="section-certificates">
+        <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <?php if (get_field('certificat1')){ ?>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="<?php the_field('certificat1'); ?>" alt="slide">
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                    <?php if (get_field('certificat2')){ ?>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="<?php the_field('certificat2'); ?>" alt="slide">
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                    <?php if (get_field('certificat3')){ ?>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="<?php the_field('certificat3'); ?>" alt="slide">
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                    <?php if (get_field('certificat4')){ ?>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="<?php the_field('certificat4'); ?>" alt="slide">
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                    <?php if (get_field('certificat5')){ ?>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="<?php the_field('certificat5'); ?>" alt="slide">
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+    </section>
+
     <section class="section-5">
         <div class="container">
             <?php if (get_field('s5-text')){ ?>

@@ -6591,4 +6591,42 @@ jQuery(document).ready(function($) {
             }
         });
     }
+
+    if($('.section-certificates').length) {
+        var mySwiper = new Swiper(".swiper-container", {
+            effect: 'coverflow',
+            autoplay: {
+                delay: 3000,
+            },
+            spaceBetween: 50,
+            speed: 500,
+            loop: true,
+            autoplayStopOnLast: false,
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false
+            },
+            zoom: {
+                maxRatio: 3,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 5
+                }
+            }
+        })
+    }
 });

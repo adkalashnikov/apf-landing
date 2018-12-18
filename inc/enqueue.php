@@ -26,7 +26,9 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
         }
 
         if(is_page_template('page-templates/petroleum-products.php')) {
+            wp_enqueue_style( 'petroleum-swiper-styles', get_template_directory_uri().'/css/swiper.min.css');
             wp_enqueue_style( 'petroleum-page-styles', get_template_directory_uri().'/css/petroleum-page.min.css');
+            wp_enqueue_script( 'petroleum-swiper-script', get_template_directory_uri().'/js/swiper.min.js');
         }
 
 		wp_enqueue_script( 'jquery');
