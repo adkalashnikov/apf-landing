@@ -98,6 +98,8 @@ gulp.task( 'minifycss', function() {
     return gulp.src( [
             `${paths.css}/theme.css`,
             `${paths.css}/petroleum-page.css`,
+            `${paths.css}/coil-page.css`,
+            `${paths.css}/transportation-services.css`,
             `${paths.css}/home-page.css`
             ], {base: paths.css}
         )
@@ -118,6 +120,8 @@ gulp.task( 'minifycss-no-maps', function() {
     return gulp.src( [
             `${paths.css}/theme.css`,
             `${paths.css}/petroleum-page.css`,
+            `${paths.css}/coil-page.css`,
+            `${paths.css}/transportation-services.css`,
             `${paths.css}/home-page.css`
             ], {base: paths.css}
         )

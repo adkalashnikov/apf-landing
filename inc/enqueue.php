@@ -31,6 +31,14 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
             wp_enqueue_script( 'petroleum-swiper-script', get_template_directory_uri().'/js/swiper.min.js');
         }
 
+        if(is_page_template('page-templates/coil.php')) {
+            wp_enqueue_style( 'coil-page-styles', get_template_directory_uri().'/css/coil-page.min.css');
+        }
+
+        if(is_page_template('page-templates/transportation-services.php')) {
+            wp_enqueue_style( 'coil-page-styles', get_template_directory_uri().'/css/transportation-services.min.css');
+        }
+
 		wp_enqueue_script( 'jquery');
 		
 		$js_version = $theme_version . '.' . filemtime(get_template_directory() . '/js/theme.min.js');
