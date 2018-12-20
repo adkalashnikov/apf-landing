@@ -6595,9 +6595,9 @@ jQuery(document).ready(function($) {
     if($('.section-certificates').length) {
         var mySwiper = new Swiper(".swiper-container", {
             effect: 'coverflow',
-            autoplay: {
-                delay: 3000,
-            },
+            // autoplay: {
+            //     delay: 3000,
+            // },
             spaceBetween: 50,
             speed: 500,
             loop: true,

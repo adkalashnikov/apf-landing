@@ -8,28 +8,32 @@
                     </div>
                     <div class="col-md">
                         <div class="contact-info">
+                            <?php
+                                $post = get_page_by_path( 'futer', OBJECT, 'apf-theme-options' );
+                                $post_id = $post->ID;
+                            ?>
                             <div class="d-flex align-items-center pb-3">
                                 <svg class="icon icon-marker"><use xlink:href="#icon-marker"></use></svg>
-                                <?php if (get_field('contacts-text1', 50)){ ?>
-                                    <?php the_field('contacts-text1', 50); ?>
+                                <?php if (get_field('contacts-text1', $post_id)){ ?>
+                                    <?php the_field('contacts-text1', $post_id); ?>
                                 <?php } ?>
                             </div>
                             <div class="d-flex align-items-center pb-3">
                                 <svg class="icon icon-phone-light"><use xlink:href="#icon-phone-light"></use></svg>
-                                <?php if (get_field('contacts-text2', 50)){ ?>
-                                    <?php the_field('contacts-text2', 50); ?>
+                                <?php if (get_field('contacts-text2', $post_id)){ ?>
+                                    <?php the_field('contacts-text2', $post_id); ?>
                                 <?php } ?>
                             </div>
                             <div class="d-flex align-items-center pb-3">
                                 <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
-                                <?php if (get_field('contacts-text3', 50)){ ?>
-                                    <?php the_field('contacts-text3', 50); ?>
+                                <?php if (get_field('contacts-text3', $post_id)){ ?>
+                                    <?php the_field('contacts-text3', $post_id); ?>
                                 <?php } ?>
                             </div>
                             <div class="d-flex align-items-center">
                                 <svg class="icon icon-fax"><use xlink:href="#icon-fax"></use></svg>
-                                <?php if (get_field('contacts-text4', 50)){ ?>
-                                    <?php the_field('contacts-text4', 50); ?>
+                                <?php if (get_field('contacts-text4', $post_id)){ ?>
+                                    <?php the_field('contacts-text4', $post_id); ?>
                                 <?php } ?>
                             </div>
                         </div>

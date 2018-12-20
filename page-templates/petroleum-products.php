@@ -26,19 +26,17 @@ $container = get_theme_mod( 'understrap_container_type' );
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php wp_head(); ?>
-
-    <style>
-        <?php if (get_field('s-top-bg')) { ?>
-        .section-top {
-            background-image: url(<?php the_field('s-top-bg'); ?>);
-        }
-        <?php } ?>
-    </style>
 </head>
 <body>
 
 <div class="inner-page">
     <section class="section-top">
+        <?php if (get_field('s-top-bg')) { ?>
+            <video class="bg-vid" poster="<?php the_field('s-top-bg'); ?>" autoplay="" loop="" muted="">
+                <source src="<?php the_field('s-top-vbg'); ?>" type="video/mp4">
+            </video>
+        <?php } ?>
+
         <?php get_template_part('inc/header'); ?>
 
         <div class="container">

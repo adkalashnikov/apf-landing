@@ -22,6 +22,19 @@ body {
   position: relative;
   overflow: hidden;
 
+  .bg-vid {
+    position: absolute;
+    opacity: 0.2;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+  }
+
   header {
     margin-bottom: 50px;
 
@@ -69,36 +82,7 @@ body {
     }
   }
 
-  .bg-wave3 {
-    width: 100%;
-    margin-top: 30px;
-
-    @include media-breakpoint-up(lg) {
-      height: 80px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    @include media-breakpoint-up(xl) {
-      height: 115px;
-    }
-
-    @media(min-width: 1920px) {
-      height: 145px;
-    }
-
-    @media(min-width: 2900px) {
-      display: none;
-    }
-
-    svg {
-      @include media-breakpoint-up(lg) {
-        width: 100%;
-        height: auto;
-        position: absolute;
-      }
-    }
-  }
+  @import "components/bg-wave3";
 
   .text-item {
     text-align: left;
