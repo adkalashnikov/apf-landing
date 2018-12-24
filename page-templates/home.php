@@ -111,7 +111,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <?php } ?>
                         </div>
                         <div class="button-holder">
-                            <a class="more-link" href="#">Подробнее</a>
+                            <a class="more-link" href="<?php the_field('s3-link1'); ?>">Подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <?php } ?>
                         </div>
                         <div class="button-holder">
-                            <a class="more-link" href="#">Подробнее</a>
+                            <a class="more-link" href="<?php the_field('s3-link2'); ?>">Подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <?php } ?>
                         </div>
                         <div class="button-holder">
-                            <a class="more-link" href="#">Подробнее</a>
+                            <a class="more-link" href="<?php the_field('s3-link3'); ?>">Подробнее</a>
                         </div>
                     </div>
                 </div>
