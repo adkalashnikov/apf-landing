@@ -80,9 +80,11 @@
     }
 
     .current-menu-item {
-      a {
-        text-decoration: none;
-        border: 2px solid #F2C94C;
+      &:not(.contacts-link) {
+        a {
+          text-decoration: none;
+          border: 2px solid #F2C94C;
+        }
       }
     }
   }
