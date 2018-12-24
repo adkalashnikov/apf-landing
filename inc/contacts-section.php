@@ -1,4 +1,4 @@
-<section class="section-contacts">
+<section class="section-contacts" id="contacts">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-lg-8">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="row-copy d-none d-lg-flex justify-content-lg-between pt-lg-5">
-                    <div>&copy;<?php echo date(Y);?> - ООО «Компания ДЕФИ” . Все права защищены.</div>
+                    <div>&copy;<?php echo date(Y);?> - ООО «Компания ДЕФИ-ДНЕПР» . Все права защищены.</div>
                     <div>Разработка: <a href="https://freelancehunt.com/freelancer/Murzak.html" target="_blank">murzak</a></div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="col-md-12 row-copy d-lg-none pt-2">
-                <div>&copy;<?php echo date(Y);?> - ООО «Компания ДЕФИ” . Все права защищены.</div>
+                <div>&copy;<?php echo date(Y);?> - ООО «Компания ДЕФИ-ДНЕПР» . Все права защищены.</div>
                 <div>Разработка: <a href="https://freelancehunt.com/freelancer/Murzak.html" target="_blank">murzak</a></div>
             </div>
         </div>
